@@ -18,18 +18,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="G0w-0w-7pW">
-                                <rect key="frame" x="60.5" y="40" width="480" height="420"/>
-                            </imageView>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BaT-Dd-Iyi">
+                                <rect key="frame" x="90" y="40" width="420" height="420"/>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="G0w-0w-7pW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="2SO-Qn-La1"/>
-                            <constraint firstItem="G0w-0w-7pW" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="7Zo-B6-8Ih"/>
-                            <constraint firstItem="G0w-0w-7pW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="wFS-c5-jB0"/>
-                            <constraint firstItem="G0w-0w-7pW" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="z5O-gf-ddH"/>
+                            <constraint firstItem="BaT-Dd-Iyi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LWl-Zy-wYk"/>
+                            <constraint firstItem="BaT-Dd-Iyi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="dHg-oD-ijJ"/>
+                            <constraint firstItem="BaT-Dd-Iyi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="veI-43-Pz4"/>
+                            <constraint firstItem="BaT-Dd-Iyi" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="zuo-NW-lp2"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="mapView" destination="BaT-Dd-Iyi" id="EFz-ob-iS6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

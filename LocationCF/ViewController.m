@@ -11,6 +11,7 @@
 @interface ViewController ()
 
 @property(strong, nonatomic) CLLocationManager *locationManager;
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
 
 
 @end
@@ -20,6 +21,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self requestPermissions];
+    [self.mapView setShowsUserLocation:YES];
 }
 
 - (void)didReceiveMemoryWarning {
