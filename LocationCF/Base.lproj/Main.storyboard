@@ -20,15 +20,51 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="BaT-Dd-Iyi">
                                 <rect key="frame" x="90" y="40" width="420" height="420"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="5u2-eQ-q1b"/>
+                                </connections>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bS1-kp-YQl">
+                                <rect key="frame" x="124" y="480" width="70" height="30"/>
+                                <state key="normal" title="Location 1"/>
+                                <connections>
+                                    <action selector="locationButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jj7-2k-aTb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="soP-1E-d4f">
+                                <rect key="frame" x="264" y="480" width="72" height="30"/>
+                                <state key="normal" title="Location 2"/>
+                                <connections>
+                                    <action selector="locationButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="i5I-wa-3fo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRn-tp-7v0">
+                                <rect key="frame" x="406" y="480" width="72" height="30"/>
+                                <state key="normal" title="Location 3"/>
+                                <connections>
+                                    <action selector="locationButtonSelected:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Aql-0d-qpg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="soP-1E-d4f" firstAttribute="top" secondItem="BaT-Dd-Iyi" secondAttribute="bottom" constant="20" id="LPg-a5-OiY"/>
                             <constraint firstItem="BaT-Dd-Iyi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="LWl-Zy-wYk"/>
+                            <constraint firstItem="IRn-tp-7v0" firstAttribute="bottom" secondItem="soP-1E-d4f" secondAttribute="bottom" id="VII-Sl-Tcv"/>
+                            <constraint firstItem="soP-1E-d4f" firstAttribute="leading" secondItem="bS1-kp-YQl" secondAttribute="trailing" constant="70" id="aBH-8R-hD9"/>
                             <constraint firstItem="BaT-Dd-Iyi" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.7" id="dHg-oD-ijJ"/>
+                            <constraint firstItem="soP-1E-d4f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hux-1B-qvj"/>
+                            <constraint firstItem="bS1-kp-YQl" firstAttribute="top" secondItem="BaT-Dd-Iyi" secondAttribute="bottom" constant="20" id="mvM-IA-6tO"/>
+                            <constraint firstItem="IRn-tp-7v0" firstAttribute="leading" secondItem="soP-1E-d4f" secondAttribute="trailing" constant="70" id="n0Q-wq-tdt"/>
+                            <constraint firstItem="bS1-kp-YQl" firstAttribute="bottom" secondItem="soP-1E-d4f" secondAttribute="bottom" id="q9c-DW-6jz"/>
                             <constraint firstItem="BaT-Dd-Iyi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="veI-43-Pz4"/>
                             <constraint firstItem="BaT-Dd-Iyi" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="zuo-NW-lp2"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="mvM-IA-6tO"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="mapView" destination="BaT-Dd-Iyi" id="EFz-ob-iS6"/>
