@@ -13,6 +13,7 @@
 		B7749C5C1C03B2BA005C32E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7749C5A1C03B2BA005C32E8 /* Main.storyboard */; };
 		B7749C5E1C03B2BA005C32E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7749C5D1C03B2BA005C32E8 /* Assets.xcassets */; };
 		B7749C611C03B2BA005C32E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7749C5F1C03B2BA005C32E8 /* LaunchScreen.storyboard */; };
+		B7749C691C03B43E005C32E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7749C681C03B43E005C32E8 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B7749C5D1C03B2BA005C32E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B7749C601C03B2BA005C32E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B7749C621C03B2BA005C32E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7749C681C03B43E005C32E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7749C691C03B43E005C32E8 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +45,7 @@
 		B7749C451C03B2B9005C32E8 = {
 			isa = PBXGroup;
 			children = (
+				B7749C681C03B43E005C32E8 /* MapKit.framework */,
 				B7749C501C03B2B9005C32E8 /* LocationCF */,
 				B7749C4F1C03B2B9005C32E8 /* Products */,
 			);
@@ -58,14 +62,9 @@
 		B7749C501C03B2B9005C32E8 /* LocationCF */ = {
 			isa = PBXGroup;
 			children = (
-				B7749C541C03B2BA005C32E8 /* AppDelegate.h */,
-				B7749C551C03B2BA005C32E8 /* AppDelegate.m */,
-				B7749C571C03B2BA005C32E8 /* ViewController.h */,
-				B7749C581C03B2BA005C32E8 /* ViewController.m */,
-				B7749C5A1C03B2BA005C32E8 /* Main.storyboard */,
-				B7749C5D1C03B2BA005C32E8 /* Assets.xcassets */,
-				B7749C5F1C03B2BA005C32E8 /* LaunchScreen.storyboard */,
-				B7749C621C03B2BA005C32E8 /* Info.plist */,
+				B7749C6C1C03B4D7005C32E8 /* App */,
+				B7749C6A1C03B49F005C32E8 /* View Controller */,
+				B7749C6B1C03B4B7005C32E8 /* Views */,
 				B7749C511C03B2B9005C32E8 /* Supporting Files */,
 			);
 			path = LocationCF;
@@ -74,9 +73,38 @@
 		B7749C511C03B2B9005C32E8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				B7749C5D1C03B2BA005C32E8 /* Assets.xcassets */,
 				B7749C521C03B2BA005C32E8 /* main.m */,
+				B7749C621C03B2BA005C32E8 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B7749C6A1C03B49F005C32E8 /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B7749C571C03B2BA005C32E8 /* ViewController.h */,
+				B7749C581C03B2BA005C32E8 /* ViewController.m */,
+			);
+			name = "View Controller";
+			sourceTree = "<group>";
+		};
+		B7749C6B1C03B4B7005C32E8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7749C5A1C03B2BA005C32E8 /* Main.storyboard */,
+				B7749C5F1C03B2BA005C32E8 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B7749C6C1C03B4D7005C32E8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B7749C541C03B2BA005C32E8 /* AppDelegate.h */,
+				B7749C551C03B2BA005C32E8 /* AppDelegate.m */,
+			);
+			name = App;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -110,6 +138,11 @@
 				TargetAttributes = {
 					B7749C4D1C03B2B9005C32E8 = {
 						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
