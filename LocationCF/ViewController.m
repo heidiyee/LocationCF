@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 
-@interface ViewController () <CLLocationManagerDelegate>
+@interface ViewController () <CLLocationManagerDelegate, MKMapViewDelegate>
 
 @property(strong, nonatomic) CLLocationManager *locationManager;
 @property (weak, nonatomic) IBOutlet MKMapView *mapView;
@@ -21,7 +21,6 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self requestPermissions];
-    [self zoomInUserLocation];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -32,13 +31,29 @@
     self.locationManager = [[CLLocationManager alloc] init];
     [self.locationManager requestWhenInUseAuthorization];
     self.locationManager.delegate = self;
+    self.mapView.delegate = self;
+}
+
+-(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
+    if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
+        self.mapView.showsUserLocation = YES;
+    }
+}
+
+-(void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation {
+    MKCoordinateRegion mapRegion;
+    mapRegion.center = mapView.userLocation.coordinate;
+    mapRegion.span.latitudeDelta = 0.05;
+    mapRegion.span.longitudeDelta = 0.05;
     
+    [mapView setRegion:mapRegion animated: YES];
 }
 
 - (IBAction)locationButtonSelected:(id)sender {
     if ([sender isKindOfClass:[UIButton class]]) {
         UIButton *button = (UIButton *)sender;
         NSString *buttonTitle = button.titleLabel.text;
+        self.mapView.showsUserLocation = NO;
         
         if ([buttonTitle isEqualToString:@"Location 1"]) {
             CLLocationCoordinate2D coordinate = CLLocationCoordinate2DMake(47.6902328,-122.4016132);
@@ -55,20 +70,6 @@
     }
 }
 
--(void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
-    if (status == kCLAuthorizationStatusAuthorizedWhenInUse) {
-        self.mapView.showsUserLocation = YES;
-    }
-}
 
--(void)zoomInUserLocation {
-//    MKCoordinateRegion mapRegion;
-//    mapRegion.center = self.mapView.userLocation.coordinate;
-//    mapRegion.span.latitudeDelta = 0.2;
-//    mapRegion.span.longitudeDelta = 0.2;
-    
-    
-    self.mapView.showsUserLocation = YES;
-}
 
 @end
