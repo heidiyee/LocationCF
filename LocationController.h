@@ -13,7 +13,6 @@
 @optional
 -(void) locationControllerDidUpdateLocation:(CLLocation *)location;
 
-
 @end
 
 @interface LocationController : NSObject
@@ -24,6 +23,9 @@
 
 
 + (LocationController *)SharedController;
+
+-(void)start;
+-(void)stop;
 
 
 @end

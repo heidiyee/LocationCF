@@ -15,6 +15,7 @@
 		B7749C611C03B2BA005C32E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7749C5F1C03B2BA005C32E8 /* LaunchScreen.storyboard */; };
 		B7749C691C03B43E005C32E8 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7749C681C03B43E005C32E8 /* MapKit.framework */; };
 		B7749C6F1C04E06C005C32E8 /* LocationController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7749C6E1C04E06C005C32E8 /* LocationController.m */; };
+		B7749C731C051D72005C32E8 /* DetailedViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7749C721C051D72005C32E8 /* DetailedViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		B7749C681C03B43E005C32E8 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		B7749C6D1C04E06C005C32E8 /* LocationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LocationController.h; path = ../LocationController.h; sourceTree = "<group>"; };
 		B7749C6E1C04E06C005C32E8 /* LocationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LocationController.m; path = ../LocationController.m; sourceTree = "<group>"; };
+		B7749C711C051D71005C32E8 /* DetailedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailedViewController.h; sourceTree = "<group>"; };
+		B7749C721C051D72005C32E8 /* DetailedViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailedViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +91,8 @@
 			children = (
 				B7749C571C03B2BA005C32E8 /* ViewController.h */,
 				B7749C581C03B2BA005C32E8 /* ViewController.m */,
+				B7749C711C051D71005C32E8 /* DetailedViewController.h */,
+				B7749C721C051D72005C32E8 /* DetailedViewController.m */,
 				B7749C701C04FFA4005C32E8 /* Location Controller */,
 			);
 			name = "View Controller";
@@ -199,6 +204,7 @@
 				B7749C591C03B2BA005C32E8 /* ViewController.m in Sources */,
 				B7749C561C03B2BA005C32E8 /* AppDelegate.m in Sources */,
 				B7749C531C03B2BA005C32E8 /* main.m in Sources */,
+				B7749C731C051D72005C32E8 /* DetailedViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

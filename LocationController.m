@@ -8,6 +8,10 @@
 
 #import "LocationController.h"
 
+@interface LocationController () <CLLocationManagerDelegate>
+
+@end
+
 @implementation LocationController 
 
 + (LocationController *) SharedController {
@@ -29,8 +33,24 @@
         
         [_locationManager requestWhenInUseAuthorization];
     }
-    
+    return self;
 }
+
+-(void)start {
+    [self.locationManager startUpdatingLocation];
+}
+
+-(void)stop {
+    [self.locationManager stopUpdatingLocation];
+}
+
+#pragma mark - CLLocationManagerDelegate
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    [self.delegate locationControllerDidUpdateLocation:(locations.lastObject)];
+    [self setLocation:[locations lastObject]];
+}
+
 
 @end
 
