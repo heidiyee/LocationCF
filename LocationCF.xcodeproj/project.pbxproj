@@ -34,6 +34,7 @@
 		B7749C931C065D38005C32E8 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = B7749C921C065D38005C32E8 /* libsqlite3.tbd */; };
 		B7749C951C065D40005C32E8 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7749C941C065D40005C32E8 /* Accounts.framework */; };
 		B7749C971C065D47005C32E8 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B7749C961C065D47005C32E8 /* Social.framework */; };
+		B7749C9A1C0BD5AC005C32E8 /* Reminder.m in Sources */ = {isa = PBXBuildFile; fileRef = B7749C991C0BD5AC005C32E8 /* Reminder.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,8 @@
 		B7749C921C065D38005C32E8 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		B7749C941C065D40005C32E8 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		B7749C961C065D47005C32E8 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		B7749C981C0BD5AC005C32E8 /* Reminder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reminder.h; sourceTree = "<group>"; };
+		B7749C991C0BD5AC005C32E8 /* Reminder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reminder.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +187,8 @@
 			children = (
 				B7749C541C03B2BA005C32E8 /* AppDelegate.h */,
 				B7749C551C03B2BA005C32E8 /* AppDelegate.m */,
+				B7749C981C0BD5AC005C32E8 /* Reminder.h */,
+				B7749C991C0BD5AC005C32E8 /* Reminder.m */,
 			);
 			name = App;
 			sourceTree = "<group>";
@@ -273,6 +278,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B7749C6F1C04E06C005C32E8 /* LocationController.m in Sources */,
+				B7749C9A1C0BD5AC005C32E8 /* Reminder.m in Sources */,
 				B7749C591C03B2BA005C32E8 /* ViewController.m in Sources */,
 				B7749C561C03B2BA005C32E8 /* AppDelegate.m in Sources */,
 				B7749C531C03B2BA005C32E8 /* main.m in Sources */,

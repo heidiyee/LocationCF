@@ -51,6 +51,16 @@
     [self setLocation:[locations lastObject]];
 }
 
+-(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region {
+    
+    NSLog(@"Region entered");
+    
+    UILocalNotification *notification = [[UILocalNotification alloc]init];
+    notification.alertTitle = @"Region entered";
+    notification.alertBody = @"I hope this works";
+    [[UIApplication sharedApplication]presentLocalNotificationNow:notification];
+}
+
 
 @end
 
